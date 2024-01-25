@@ -123,4 +123,57 @@ def extract_digits(n):
     print (n)        
     print (new_str)
         
-extract_digits(156484)
+# extract_digits(156484)
+
+'''Exercise 12: Calculate income tax for the given income by adhering to the rules below'''
+# For example, suppose the taxable income is 45000, and the income tax payable is
+# 10000*0% + 10000*10%  + 25000*20% = $6000. // after the first 20,000 the remaining is 20% taxable
+def tax_calculation(income):
+    tax = 0
+    if (income > 10000 and income<=20000):
+          tax = (income-10000)*0.1
+    elif (income > 20000):
+        tax = 10000*0.1 + (income-20000)*0.20
+    return tax
+
+# print (tax_calculation(45000))
+
+'''Exercise 13: Print multiplication table from 1 to 10'''
+def multip_table():
+    for num in range (1,11):
+        i = 1
+        while i<=10:
+            print (num*i,' ',end='')
+            i += 1
+        print ('')
+          
+# multip_table()
+
+'''Exercise 14: Print a downward Half-Pyramid Pattern of Star (asterisk)'''
+# ****
+# ***
+# **
+# *
+def downwar_pattern(char='*',length=5):
+    pattern_length = length
+    for num in range(1,length+1):
+        while pattern_length>=1:
+            print (char*pattern_length)
+            pattern_length -= 1
+
+# downwar_pattern('_-_',10)
+
+'''Exercise 15 : Write a function called exponent(base, exp) that returns
+an int value of base raises to the power of exp.'''
+
+def exponent(base, exp):
+    result = 1
+    exponent = exp
+    while exponent>0:
+        result *= base
+        exponent -=1
+    return result
+
+print (exponent(2,5))
+
+'''******************************************** END OF BASICS / firt section'''
