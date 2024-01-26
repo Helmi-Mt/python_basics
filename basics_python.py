@@ -67,6 +67,7 @@ def substring_count(string,sub_string):
     list = re.findall(sub_string,string) # this will return the list of all the occurences
     print (f'{sub_string}, the sub_string,  appears in the string {len(list)} times.')
 
+<<<<<<< HEAD
 # substring_count('Emma is good developer. Emma is a writer','Emma')
 
 def substring_count_2(string,sub_string):
@@ -177,3 +178,13 @@ def exponent(base, exp):
 print (exponent(2,5))
 
 '''******************************************** END OF BASICS / firt section'''
+=======
+substring_count('Emma is good developer. Emma is a writer','Emma')
+
+def substring_count_2(string,sub_string):
+    return string.count(sub_string) # count method will count the number of occurences of substring in string
+print ('the count way : ',substring_count_2('Emma is good developer. Emma is a writer','Emma'))
+
+'''Exercise 8: Exercise 8: Print the following pattern'''
+# exercise : 
+>>>>>>> basics_branch

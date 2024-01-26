@@ -29,7 +29,7 @@ def print_strings(separation='**',*words):
         
 # print_strings('**','Name', 'Is','James','American')
 # or try the built in like this
-print('My', 'Name', 'Is', 'James', sep='**')
+# print('My', 'Name', 'Is', 'James', sep='**')
 
 '''Exercise 3: Convert Decimal number to octal using print() output formatting'''
 x = 10
@@ -90,4 +90,38 @@ def three_inputs():
     print ('The input line of words ', in_str)
     print ('The input list : ',list_input)
             
-three_inputs()
+# three_inputs()
+
+'''Exercise 8: Format variables using a string.format() method'''
+# Write a program to use string.format() method to format the following three variables as per the expected output
+def format_str():
+    
+    text = 'I have {totalMoney} dollars so I can buy {quantity} football for {price:.5f} dollars.'
+    print (text.format(totalMoney = 1000,quantity = 3,price = 450))
+
+# format_str()
+
+'''Exercise 9: Check file is empty or not'''
+import os # os is a python module, 
+def check_fiel(file_name):
+    size = os.stat("test.txt").st_size  # this will get the size of the file
+    print (size)
+    if (os.path.getsize(file_name) == 0):
+        print ('File empty')
+    else:
+        print ('File contains data, the file size = ' ,os.path.getsize(file_name))
+    
+# check_fiel('test.txt')
+
+'''Exercise 10: Read line number 4 from the following file'''
+def read_line_file():
+    with open('test.txt','r') as fh:
+        lines = fh.readlines() # # read all lines from a file
+        print (type(lines))
+        print (lines[3])
+        # for lines in fh:
+            # print ('this line = ', lines)
+       
+# read_line_file()
+
+
