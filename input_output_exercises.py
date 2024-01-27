@@ -115,8 +115,8 @@ def check_fiel(file_name):
 
 '''Exercise 10: Read line number 4 from the following file'''
 def read_line_file():
-    with open('test.txt','r') as fh:
-        lines = fh.readlines() # # read all lines from a file
+    with open('test.txt','r') as fh: # using with allow to close the opened file automatically 
+        lines = fh.readlines() # # read all lines from a file as a list
         print (type(lines))
         print (lines[3])
         # for lines in fh:
